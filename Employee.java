@@ -12,7 +12,6 @@ class EmployeeDetails
 
 class Manager extends EmployeeDetails
 {
-    String specialization;
     String department;
     
 }
@@ -20,7 +19,6 @@ class Manager extends EmployeeDetails
 class Officer extends EmployeeDetails
 {
     String specialization;
-    String department;
 }
 
 public class Employee{
@@ -30,39 +28,52 @@ public class Employee{
         Manager manag = new Manager();
         Officer offic = new Officer();
 
-        manag.name = "Manu" ; 
-        manag.age = 29;
-        manag.phone_no = "9995979585";
-        manag.address = "Never ask anyones address";
-        manag.salary = "65000";
-        manag.specialization = "Just sitting" ; 
-        manag.department = "No department";
+        System.out.println("Enter the name of the manager:");
+        manag.name = obj.nextLine();
+        System.out.println("Enter the age of the manager:");
+        manag.age = obj.nextInt();
+        obj.nextLine();
+        System.out.println("Enter the phone_no of the manager:");
+        manag.phone_no = obj.nextLine();
+        System.out.println("Enter the address of the manager:");
+        manag.address = obj.nextLine();
+        System.out.println("Enter the Salary of the manager:");
+        manag.salary = obj.nextLine();
+        System.out.println("Enter the Department of the manager:");
+        manag.department = obj.nextLine();
 
+
+        System.out.println("Enter the name of the officer:");
+        offic.name = obj.nextLine();
+        System.out.println("Enter the age of the officer:");
+        offic.age = obj.nextInt();
+        System.out.println("Enter the phone_no of the officer:");
+        obj.nextLine();
+        offic.phone_no = obj.nextLine();
+        System.out.println("Enter the address of the officer:");
+        offic.address = obj.nextLine();
+        System.out.println("Enter the Salary of the officer:");
+        offic.salary = obj.nextLine();
+        System.out.println("Enter the Specialization of the officer:");
+        offic.specialization = obj.nextLine();
+        
+
+        System.out.println();
         System.out.println("Details of Manager");
-        System.out.println(manag.name);
-        System.out.println(manag.age);
-        System.out.println(manag.phone_no);
-        System.out.println(manag.address);
-        System.out.println(manag.salary);
-        System.out.println(manag.specialization);
-        System.out.println(manag.department);
+        System.out.println("Name: "+manag.name);
+        System.out.println("Age: "+manag.age);
+        System.out.println("Phone number: "+manag.phone_no);
+        System.out.println("Address: "+manag.address);
+        System.out.println("Salary: "+manag.salary);
+        System.out.println("Department: "+manag.department);
 
-
-        offic.name = "Jishnu" ; 
-        offic.age = 27;
-        offic.phone_no = "123456789";
-        offic.address = "Never ask anyones address";
-        offic.salary = "6000";
-        offic.specialization = "Just standing" ; 
-        offic.department = "No department";
-
+        System.out.println();
         System.out.println("Details of Officer");
-        System.out.println(offic.name);
-        System.out.println(offic.age);
-        System.out.println(offic.phone_no);
-        System.out.println(offic.address);
-        System.out.println(offic.salary);
-        System.out.println(offic.specialization);
-        System.out.println(offic.department);
+        System.out.println("Name: " +offic.name);
+        System.out.println("Age: "+offic.age);
+        System.out.println("Phone number: "+offic.phone_no);
+        System.out.println("Address: "+offic.address);
+        System.out.println("Salary: "+offic.salary);
+        System.out.println("Specialization: "+offic.specialization);
     }
 }
