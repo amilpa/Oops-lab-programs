@@ -67,7 +67,7 @@ class linkedlist
         }
         else
         {
-            System.out.println("Node doesn't exist");
+            System.out.println("Item doesn't exist");
         }
     }
 
