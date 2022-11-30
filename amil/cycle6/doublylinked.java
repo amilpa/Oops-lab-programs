@@ -71,6 +71,20 @@ class linkedlist
         }
     }
 
+    void pushend(int new_data)
+    {
+        Node temp = head;
+        Node new_node = new Node(new_data);
+
+        while(temp.next!=null)
+        {
+            temp = temp.next;
+        }
+		new_node.prev = temp;
+		new_node.next = null;
+		temp.next = new_node;
+    }
+
     int delete()
     {
 		int temp = head.data;
@@ -104,17 +118,18 @@ class qn1
         {
             System.out.println("1.Insert at front");
             System.out.println("2.Insert at certain index");
-            System.out.println("3.Delete");
-            System.out.println("4.Display the doubly linked list");
+            System.out.println("3.Insert at end");
+            System.out.println("4.Delete");
+            System.out.println("5.Display the doubly linked list");
             System.out.println("Enter the choice:");
             choice = obj.nextInt();
-            if(choice ==1)
+            if(choice == 1)
             {
                 System.out.println("Enter the value to insert into the list:");
                 val = obj.nextInt();
                 dll.pushfront(val);
             }
-            else if(choice==2)
+            else if(choice == 2)
             {
                 System.out.println("Enter the position:");
                 index = obj.nextInt();
@@ -124,9 +139,17 @@ class qn1
             }
             else if(choice==3)
             {
+                System.out.println("Enter the value to insert into the list:");
+                val = obj.nextInt();
+				dll.pushend(val);
+            }
+
+            else if(choice==4)
+            {
 				System.out.println(dll.delete()+" is deleted");
             }
-            else if(choice==4)
+
+            else if(choice==5)
             {
                 dll.display();
             }
