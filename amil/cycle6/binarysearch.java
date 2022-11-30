@@ -79,7 +79,7 @@ class program
         }
         else
         {
-            System.out.println("Element found at "+ (pos+1));
+            System.out.println("Element found at position "+ (pos+1));
         }
     }
 }
