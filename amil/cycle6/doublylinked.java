@@ -32,7 +32,7 @@ class linkedlist
         
         head = new_node;
     }
-    void pushat(int new_data,int number)
+    void pushat(int new_data,int position)
     {
         int flag=0;
         int index=1;
@@ -43,7 +43,7 @@ class linkedlist
         
         while(temp!=null)
         {
-            if(index == number )
+            if(index == position )
             {
                 flag=1;
                 break;
