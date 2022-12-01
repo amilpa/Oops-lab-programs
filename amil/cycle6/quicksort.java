@@ -54,7 +54,7 @@ class program
             arr[i] = obj.nextLine();
         }
         so.quicksort(arr ,0, len-1);
-        System.out.println("The sorted array:");
+        System.out.println("The sorted elements:");
         for(int i=0 ; i<len ; i++)
         {
             System.out.println(arr[i]+" ");
